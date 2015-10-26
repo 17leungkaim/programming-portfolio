@@ -117,6 +117,15 @@ def bigger(r, p):
 		
 def no_diff(w, h):
 	return w == h
+	
+def no_same(b, g):
+	return not b == g
+
+def less_than(r, p):
+	return r < p
+	
+def at_least_13(d):
+	return d >= 13
 		
 def main_boolean_numbers():
 	print "test positive(29): ", positive(29)
@@ -125,6 +134,13 @@ def main_boolean_numbers():
 	print "test bigger (10, 200: ", bigger (10, 200)
 	print "test no_diff(99, 99): ", no_diff(99,99)
 	print "test no-diff(67, 76): ", no_diff(67, 76)
+	print "test no_same(99, 99): ", no_same(99,99)
+	print "test no-same(67, 76): ", no_same(67, 76)
+	print "test less_than(2, 8): ", less_than(2, 8)
+	print "test less_than(8, 2): ", less_than(8, 2)
+	print "test at_least_13(45): ", at_least_13(45)
+	print "test at_least_13(13): ", at_least_13(13)
+	print "test at_least_13(11): ", at_least_13(11)
 
 def main():
 	main_function()
