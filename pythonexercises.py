@@ -80,6 +80,14 @@ def band(a, b):
 	
 def bor(a, b):
 	return a or b
+
+def xsame(b, g):
+	return b == g
+	
+def xor(a, b):
+	return a == b
+	
+
 	
 def main_boolean():
 	print "test reverse(True): ", reverse(True)
@@ -92,10 +100,36 @@ def main_boolean():
 	print "test bor(True, True): ", bor(True, True)
 	print "test bor(True, False): ", bor(True, False)
 	print "test bor(False, False): ", bor(False, False)
+	print "test xsame(True, True): ", xsame(True, True)
+	print "test xsame(True, False): ", xsame(True, False)
+	print "test xsame(False, False): ", xsame(False, False)
+	print "test xor(True, True): ", xor(True, True)
+	print "test xor(True, False): ", xor(True, False)
+	print "test xor(False, False): ", xor(False, False)
+	
+def positive(n):
+	return n > 0
+		
+
+def bigger(r, p):
+	return r > p
+		
+		
+def no_diff(w, h):
+	return w == h
+		
+def main_boolean_numbers():
+	print "test positive(29): ", positive(29)
+	print "test positive(-29): ", positive(-29)
+	print "test bigger(200, 10): ", bigger(200, 10)
+	print "test bigger (10, 200: ", bigger (10, 200)
+	print "test no_diff(99, 99): ", no_diff(99,99)
+	print "test no-diff(67, 76): ", no_diff(67, 76)
 
 def main():
 	main_function()
 	main_arithmetic()
 	main_boolean()
+	main_boolean_numbers()
 	
 main()
