@@ -126,6 +126,9 @@ def less_than(r, p):
 	
 def at_least_13(d):
 	return d >= 13
+
+def at_most_13(d):
+	return d <= 13
 		
 def main_boolean_numbers():
 	print "test positive(29): ", positive(29)
@@ -141,11 +144,58 @@ def main_boolean_numbers():
 	print "test at_least_13(45): ", at_least_13(45)
 	print "test at_least_13(13): ", at_least_13(13)
 	print "test at_least_13(11): ", at_least_13(11)
+	print "test at_most_13(45): ", at_most_13(45)
+	print "test at_most_13(13): ", at_most_13(13)
+	print "test at_most_13(11): ", at_most_13(11)
 
+def biggest(ab, yb):
+	if ab > yb:
+		return ab
+	return yb
+	
+def smallest(ab, yb):
+	if ab < yb:
+		return ab
+	return yb
+	
+def letter_grade(score):
+	if score >= 90:
+		return "A"
+	elif score >= 80:
+		return "B"
+	elif score >= 70:
+		return "C"
+	elif score >= 60:
+		return "D"
+	else:
+		return "F"
+		
+def food_tax(subtotal, grocery):
+	if grocery:
+		return subtotal * .03
+	else:
+		return subtotal * .0725
+	
+def main_conditionals():
+	print "test biggest(500, 10): ", biggest(500, 10)
+	print "test biggest(500, 1000): ", biggest(500, 1000)
+	print "test smallest(500, 10): ", smallest(500, 10)
+	print "test smallest(500, 1000): ", smallest(500, 1000)
+	print "test letter_grade(95): ", letter_grade(95)
+	print "test letter_grade(85): ", letter_grade(85)
+	print "test letter_grade(75): ", letter_grade(75)
+	print "test letter_grade(65): ", letter_grade(65)
+	print "test letter_grade(50): ", letter_grade(50)
+	print "test food_tax(12, True): ", food_tax(12, True)
+	print "test food_tax(5.92, False): ", food_tax(5.95, False)
+	
+	
+	
 def main():
 	main_function()
 	main_arithmetic()
 	main_boolean()
 	main_boolean_numbers()
+	main_conditionals()
 	
 main()
