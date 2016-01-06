@@ -312,6 +312,165 @@ def main_counted_loop():
 	print "test total_7s(2, 30): ", total_7s(2, 30) # 7+14+21+28
 	print "test total_non7s(2, 10): ", total_non7s(2, 10) # 2+3+4+5+6+8+9
 	print "test squares(5): ", squares(5) # 1+4+9+16
+
+	
+def hello():
+	return "hello"
+
+def nothing():
+	return ""
+	
+def second_letter(two):
+	return two [1]
+	
+def one_letter(str, num):
+	return str [num]
+	
+def concatenate(silvester, puss_in_boots):
+	return silvester+puss_in_boots	
+	
+def beauty(str):
+	return str + " beauty"	
+	
+def slice_of_life(str):
+	return str [2:5]
+	
+def slice_of_heaven(str, num):	
+	return str[num:num+4]	
+
+
+def slice_of_perfection(str, n1, n2):
+	return str[n1:n1+n2]
+
+
+def length(str):
+	len(str)
+
+def main_string():
+	print "hello(): ", hello()
+	print "nothing(): ", nothing()
+	print "testing second_letter ('cheese'): ", second_letter ('cheese')
+	print "test one_letter ('random', 5): ", one_letter('random', 5)
+	print "test concatenate('tweety ', 'shrek'): ", concatenate('tweety ', 'shrek')
+	print "test beauty('sleeping'): ", beauty('sleeping')
+	print "test slice_of_life ('bread'): ", slice_of_life('bread')
+	print "test slice_of_heaven ('heavenly', 3): ", slice_of_heaven('heavenly', 3)
+	print "test slice_of_perfection ('trees tacobell moosetracks', 7, 6): ", slice_of_perfection('trees tacobell moosetracks', 7, 6)
+	print "test length('the nile'): ", length('the nile')
+	
+def short_list():
+	return [1, 2, 3]
+
+def hollow():
+	return []
+
+def third_value(list):
+	return list[2]
+
+def one_value(list, pos):
+	return list[pos]
+
+def add_lists(a, b):
+	return a + b
+
+def pie(somelist):
+	#return somelist + [314]
+	somelist.append(314)
+	return somelist
+
+def grow_one(listy, item):
+	listy.append(item)
+	return listy
+	
+def sub_list(z):
+	return z[1: 5]
+
+def sub_list2(z, n):
+	return z[n: n+3]
+
+def sub_list3(z, n1, n2):
+	return z[n1: n1+n2]
+
+def list_length(a):
+	return len(a)
+
+def main_lists():
+	print "testing short_list(): ", short_list()
+	print "test hollow(): ", hollow()
+	a = ['Alvey', 'Kanye', 'Trump', 'Swift', 'North', 'Ellen']
+	b = ['Obama', 'Will-i-am', 'Seinfield', 'Fergie', 'Elmo', 'Wierd-Al']
+	hit = ['Brett', 'Connor', 'Dakota', 'Jeff', 'Jacob', 'Jarod', 'Kincade', 'Chandler']
+	print "test third_value(a): ", third_value(a)
+	print "test one_value(a, 5): ", one_value(a, 5)
+	print "test add_lists(a, b): ", add_lists(a, b)
+	print "test pie(a): ", pie(a)
+	print "test grow_one(b): ", grow_one(b, "Kermit")
+	print 'test sub_list(a): ', sub_list(a)
+	print 'test sub_list2(hit, 1): ', sub_list2(hit, 1)
+	print 'test sub_list3(hit, 4, 3): ', sub_list3(hit, 4, 3)
+	print 'test list_length(hit): ', list_length(hit)
+	
+def list_total(numbers):
+		total = 0
+		for number in numbers:
+			total += number
+		return total
+	
+def list_total2(numbers):
+	total = 0
+	for number in numbers:
+		if number % 2 == 0:
+			total += number
+	return total
+
+def list_total3(numbers):
+	total = 0
+	for i in range(1, len(numbers), 2):
+		total += numbers[i]
+	return total
+
+def is_lowercase(letter):
+	alpha = "abcdefghijklmnopqrstuvwxyz"
+	return letter in alpha
+	
+def string_lower_count(str):
+	count = 0
+	for c in str:
+		if is_lowercase(c):
+			count += 1
+	return count	
+
+def is_digit(char):
+	digits = "0123456789"
+	return char in digits
+	
+def string_digit_count(str):
+	count = 0
+	for c in str:
+		if is_digit(c):
+			count += 1
+	return count
+
+def is_letter(char):
+	alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	return char in alpha
+
+def string_word_count(sentence):
+	count = 0
+	for i in range (len(sentence)):
+		if sentence[i] == ' ' and is_letter(sentence [i+1]):
+			count += 1
+	return count
+
+def main_sequence():
+	class_iqs = [150, 100, 600, 2, 3000000, 28, 130, 98, 6]
+	lucky = [13, 7, 21, 12, 14, 32, 33, 11, 3, 777, 88, 42, 63]
+	print 'test list_total(class_iqs): ', list_total(class_iqs)	
+	print 'test list_total2(lucky): ', list_total2(lucky)
+	print 'test list_total3(lucky): ', list_total3(lucky)
+	print "test string_lower_count('Alvey is Handsom'): ", string_lower_count('Alvey is Handsom')
+	print "test string_digit_count('R2-D2'): ", string_digit_count('R2-D2')
+	print "test string_word_count('I am a doctor of moder medicine'): ", string_word_count('I am a doctor of moder medicine')
 	
 def main():
 	main_function()
@@ -320,5 +479,8 @@ def main():
 	main_boolean_numbers()
 	main_conditionals()
 	main_counted_loop()
+	main_string()
+	main_lists()
+	main_sequence()
 	
 main()
