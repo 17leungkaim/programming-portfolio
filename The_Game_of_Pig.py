@@ -3,7 +3,7 @@
 import random
 
 def roll_die(sides):
-	r = random.randrange(1, 6)
+	r = random.randrange(1, sides+1)
 	return r
 	
 
@@ -26,9 +26,17 @@ def take_turn(point):
 			if yes:
 				return roll_die
 			else:
-				return P2 roll_die
-print"End of turn"
-return number of turn points			
+				return
+print"Turn over"
+return			
+
+for i in range(10):
+	print roll_die(4)
+
+print
+
+take_turn(1)
+take_turn(2)
 
 def show_instructions():
 print "Welcom to the Game of Pig. To win, be the player with the most points at the end of the game. the game ends at the end of a round where at least one plaer has 100 or more points."
@@ -53,3 +61,6 @@ def main():
 			return "You lose"
 		else:
 			return "Its a tie"
+			
+def main():
+	
