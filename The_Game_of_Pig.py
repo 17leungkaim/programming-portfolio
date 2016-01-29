@@ -25,7 +25,7 @@ def take_turn(point):
 			return Qst
 			if yes:
 				return roll_die
-			else:
+			otherwise no :
 				return
 print"Turn over"
 return			
@@ -46,9 +46,10 @@ def main():
 		return show_instructions
 		Pl1 = 0
 		Pl2 = 0
-		while Player1 and Player2 total points are < 100:
-			return Pl1 + Pl2
-			return Pl1 + roll_die
+		while Pl1 + Pl2 < 100:
+			print "Player1 has " + Pl1
+			print "Player2 has " + Pl2
+			return take_turn(1)
 			
 			
 			
